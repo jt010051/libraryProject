@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <template if:true={books.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={books.data}
+                columns={columns}
+                onrowselection={getSelectedName}>
+            >
+            <lightning-button variant="success" label="Return Book" title="Successful action" onclick={handleReturnBook} class="slds-var-m-left_x-small"></lightning-button>
+           </lightning-datatable>
+         </template>
+    </lightning-card>
+ 
+</template>

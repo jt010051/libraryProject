@@ -1,0 +1,24 @@
+<template>
+  
+    <div class="slds-var-m-bottom_small">
+            <lightning-input type="text"
+               value={searchValue}
+               label="Search Book"
+               placeholder="search here..."
+               onchange={searchKeyword}
+               ></lightning-input>
+         </div>         
+         <lightning-button variant="success" label="Search" title="Successful action" onclick={handleSearchUser} class="slds-var-m-left_x-small"></lightning-button>
+         <br/>
+         <br/>
+         <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={listOfUsers}
+                    columns={columns}
+                    onrowselection={getSelectedName}>
+            </lightning-datatable>
+        </div>  
+        <br/>
+       
+</template>
